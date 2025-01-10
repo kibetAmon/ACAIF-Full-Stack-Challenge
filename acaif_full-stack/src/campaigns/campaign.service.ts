@@ -19,6 +19,11 @@ export class CampaignService {
       return await newCampaign.save();
     }
 
+     // Method to fetch all campaigns
+  async getAllCampaigns(): Promise<Campaign[]> {
+    return this.campaignModel.find().exec();
+  }
+
   // Fetch campaigns the influencer has joined
   async getCampaignsByInfluencer(influencerId: string): Promise<Campaign[]> {
     return this.campaignModel.find({ influencers: influencerId }).exec();
