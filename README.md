@@ -89,6 +89,7 @@ Endpoint: POST /campaigns
 Description: Create a new campaign.
 
 Request Body:
+
 '''json
 {
   "title": "Campaign Title",
@@ -125,6 +126,7 @@ Endpoint: POST /influencers
 Description: Register a new influencer.
 
 Request Body:
+
 '''json
 {
   "name": "John Doe",
@@ -153,6 +155,7 @@ Endpoint: POST /posts/create
 Description: Create a new post for an influencer and campaign.
 
 Request Body:
+
 '''json
 {
   "influencerId": "63e2d3c01a27b7e29134f7c8",
