@@ -59,3 +59,112 @@ npm run start:dev
 
 The backend API will be accessible at http://localhost:3000.
 
+# Frontend Setup
+
+Navigate to the frontend directory:
+
+cd ../front-end-app
+
+Install the dependencies:
+
+npm install
+
+Start the Next.js development server:
+
+npm run dev
+
+The frontend will be accessible at http://localhost:3001.
+
+
+
+
+# Backend API Endpoints
+
+1. Campaign Management
+
+Create a Campaign
+
+Endpoint: POST /campaigns
+
+Description: Create a new campaign.
+
+Request Body:
+
+{
+  "title": "Campaign Title",
+  "status": "ongoing",
+  "deadline": "2025-01-31T00:00:00Z",
+  "instructions": "Instructions for the campaign",
+  "brandId": "63e2d3c01a27b7e29134f7c8"
+}
+
+Fetch All Campaigns
+
+Endpoint: GET /campaigns
+
+Description: Fetch a list of all campaigns.
+
+Fetch Campaigns Joined by an Influencer
+
+Endpoint: GET /campaigns/influencer/:influencerId
+
+Description: Fetch campaigns an influencer has joined.
+
+Fetch Performance Metrics for a Campaign
+
+Endpoint: GET /campaigns/performance/:influencerId
+
+Description: Get performance metrics for campaigns.
+
+2. Influencer Management
+
+Register an Influencer
+
+Endpoint: POST /influencers
+
+Description: Register a new influencer.
+
+Request Body:
+
+{
+  "name": "John Doe",
+  "email": "johndoe@example.com",
+  "phone": "1234567890"
+}
+
+Fetch Influencers in a Campaign
+
+Endpoint: GET /campaigns/influencer/:campaignId
+
+Description: Get a list of influencers who joined a specific campaign.
+
+3. Post Management
+
+Fetch Posts by Influencer and Campaign
+
+Endpoint: GET /posts/:influencerId/campaign/:campaignId
+
+Description: Fetch all posts for a specific influencer and campaign.
+
+Create a Post
+
+Endpoint: POST /posts/create
+
+Description: Create a new post for an influencer and campaign.
+
+Request Body:
+
+{
+  "influencerId": "63e2d3c01a27b7e29134f7c8",
+  "campaignId": "63e2d3c01a27b7e29134f7c8",
+  "content": "This is a post content."
+}
+
+Update Engagement Metrics for a Post
+
+Endpoint: PUT /posts/update/:postId
+
+Description: Update likes, shares, and comments for a post.
+
+Request Body:
+
