@@ -174,3 +174,28 @@ Description: Update likes, shares, and comments for a post.
 
 Request Body:
 
+
+# Frontend Features
+
+1. Campaign List Page
+
+Displays campaigns with statuses and deadlines.
+
+Fetches data from the GET /campaigns endpoint.
+
+2. Performance Snapshot Page
+
+Displays metrics such as total posts submitted, posting dates, and estimated engagement (likes, shares, comments).
+
+Fetches data from the GET /campaigns/performance/:influencerId endpoint.
+
+3. Influencer List Page
+
+Displays influencers who joined a campaign, their submission dates, and post counts.
+
+Fetches data from the GET /campaigns/influencer/:campaignId endpoint.
+
+4. Snapshot Page
+
+Provides a performance summary of the campaign, including posts per day, engagement estimates, and total earnings.
+
