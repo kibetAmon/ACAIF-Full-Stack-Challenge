@@ -206,3 +206,24 @@ Fetches data from the GET /campaigns/influencer/:campaignId endpoint.
 
 Provides a performance summary of the campaign, including posts per day, engagement estimates, and total earnings.
 
+# Deployment Instructions
+
+Backend Deployment
+
+Build the backend:
+
+npm run build
+
+Deploy the backend to a cloud service like Vercel, AWS, Heroku, or DigitalOcean.
+
+Ensure the environment variables (like MONGO_URI) are set correctly on the server.
+
+Frontend Deployment
+
+Build the frontend:
+
+npm run build
+
+Deploy the frontend to a platform like Vercel or Netlify.
+
+Update the API base URL in the frontend to point to the deployed backend.
