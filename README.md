@@ -98,6 +98,7 @@ Request Body:
   "instructions": "Instructions for the campaign",
   "brandId": "63e2d3c01a27b7e29134f7c8"
 }
+'''
 
 Fetch All Campaigns
 
@@ -133,6 +134,7 @@ Request Body:
   "email": "johndoe@example.com",
   "phone": "1234567890"
 }
+'''
 
 Fetch Influencers in a Campaign
 
@@ -162,6 +164,7 @@ Request Body:
   "campaignId": "63e2d3c01a27b7e29134f7c8",
   "content": "This is a post content."
 }
+'''
 
 Update Engagement Metrics for a Post
 
