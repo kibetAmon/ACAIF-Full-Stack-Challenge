@@ -90,7 +90,7 @@ Description: Create a new campaign.
 
 Request Body:
 
-'''json
+```json
 {
   "title": "Campaign Title",
   "status": "ongoing",
@@ -98,7 +98,7 @@ Request Body:
   "instructions": "Instructions for the campaign",
   "brandId": "63e2d3c01a27b7e29134f7c8"
 }
-'''
+```
 
 Fetch All Campaigns
 
@@ -128,13 +128,13 @@ Description: Register a new influencer.
 
 Request Body:
 
-'''json
+```json
 {
   "name": "John Doe",
   "email": "johndoe@example.com",
   "phone": "1234567890"
 }
-'''
+```
 
 Fetch Influencers in a Campaign
 
@@ -158,13 +158,13 @@ Description: Create a new post for an influencer and campaign.
 
 Request Body:
 
-'''json
+```json
 {
   "influencerId": "63e2d3c01a27b7e29134f7c8",
   "campaignId": "63e2d3c01a27b7e29134f7c8",
   "content": "This is a post content."
 }
-'''
+```
 
 Update Engagement Metrics for a Post
 
