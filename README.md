@@ -212,17 +212,17 @@ Backend Deployment
 
 Build the backend:
 
-npm run build
+`npm run build`
 
 Deploy the backend to a cloud service like Vercel, AWS, Heroku, or DigitalOcean.
 
-Ensure the environment variables (like MONGO_URI) are set correctly on the server.
+Ensure the environment variables `(like MONGO_URI)` are set correctly on the server.
 
 Frontend Deployment
 
 Build the frontend:
 
-npm run build
+`npm run build`
 
 Deploy the frontend to a platform like Vercel or Netlify.
 
