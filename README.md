@@ -173,6 +173,13 @@ Endpoint: PUT /posts/update/:postId
 Description: Update likes, shares, and comments for a post.
 
 Request Body:
+```json
+{
+  "likes": 100,
+  "shares": 20,
+  "comments": 50
+}
+```
 
 
 # Frontend Features
