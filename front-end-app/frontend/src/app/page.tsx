@@ -1,13 +1,7 @@
-import React from 'react';
-import CampaignList from '../../components/CampaignList';
+import Image from "next/image";
 
-const CampaignsPage = () => {
+export default function Home() {
   return (
-    <div>
-      <h1>Campaigns</h1>
-      <CampaignList />
-    </div>
-  );
-};
 
-export default CampaignsPage;
+  );
+}
