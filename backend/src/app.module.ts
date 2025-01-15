@@ -11,7 +11,7 @@ import { BrandModule } from './brand/brand.module';
   imports: [
     // Database Connection
     MongooseModule.forRoot(
-      process.env.MONGODB_URI || 'mongodb://localhost:27017/campaign_submission',
+      process.env.MONGODB_URI || 'mongosh "mongodb+srv://amonclusters.am8ze.mongodb.net/campaign_submission" --apiVersion 1 --username amonkibetsigei --password DlOXucFUw2bk1Lha',
     ),
     // Register other modules
     InfluencerModule, // Register Influencer Module
