@@ -1,9 +1,8 @@
 // Campaigns list page
 
-
-//Use client
 "use client";
 import React, { useEffect, useState } from 'react';
+import Link from 'next/link'; // Use Link for navigation
 import axios from 'axios';
 import styles from '../../styles/CampaignList.module.css'; // Import CSS module for styling
 
@@ -12,6 +11,7 @@ interface Campaign {
   title: string;
   status: string;
   deadline: string;
+  influencerId: string; // Add influencerId to connect to the performance page
 }
 
 const CampaignList = () => {
@@ -48,8 +48,16 @@ const CampaignList = () => {
           {campaigns.map((campaign) => (
             <li key={campaign._id} className={styles.card}>
               <h2 className={styles.cardTitle}>{campaign.title}</h2>
-              <p>Status: <strong>{campaign.status}</strong></p>
-              <p>Deadline: <strong>{new Date(campaign.deadline).toLocaleDateString()}</strong></p>
+              <p>
+                Status: <strong>{campaign.status}</strong>
+              </p>
+              <p>
+                Deadline: <strong>{new Date(campaign.deadline).toLocaleDateString()}</strong>
+              </p>
+              {/* Add link to the performance page */}
+              <Link href={`/campaigns/performance/${campaign.influencerId}`} className={styles.link}>
+                View Performance Metrics
+              </Link>
             </li>
           ))}
         </ul>
@@ -59,3 +67,4 @@ const CampaignList = () => {
 };
 
 export default CampaignList;
+

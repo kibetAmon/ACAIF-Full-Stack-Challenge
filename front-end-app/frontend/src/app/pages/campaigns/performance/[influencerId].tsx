@@ -19,13 +19,15 @@ interface PerformanceMetrics {
 
 const PerformanceSnapshot: React.FC = () => {
   const { influencerId } = useParams(); // Extract influencerId from the dynamic route
+  console.log('Influencer ID:', influencerId);
+
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null);
 
   useEffect(() => {
     if (influencerId) {
       // Fetch performance metrics for the influencer
       axios
-        .get(`/api/campaigns/performance/${influencerId}`)
+        .get(`http://localhost:3001/campaigns/performance/${influencerId}`)
         .then((response) => setMetrics(response.data))
         .catch((error) => console.error('Error fetching performance metrics:', error));
     }

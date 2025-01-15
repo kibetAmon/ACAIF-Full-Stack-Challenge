@@ -1,4 +1,4 @@
-import './globals.css';
+import './globals.css'; // Update the path to your actual CSS file
 
 export const metadata = {
   title: 'Campaign Tracker',
@@ -8,7 +8,13 @@ export const metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className="app-container">
+          {/* Add a header, footer, or global components if needed */}
+          {children}
+        </div>
+      </body>
     </html>
   );
 }
+
