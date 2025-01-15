@@ -1,4 +1,3 @@
-// src/app.module.ts
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 
@@ -10,13 +9,15 @@ import { BrandModule } from './brand/brand.module';
 
 @Module({
   imports: [
-    //Database
-    MongooseModule.forRoot('mongodb://localhost:27017/campaign_submission'),
-// Database connection
+    // Database Connection
+    MongooseModule.forRoot(
+      process.env.MONGODB_URI || 'mongodb://localhost:27017/campaign_submission',
+    ),
+    // Register other modules
     InfluencerModule, // Register Influencer Module
     CampaignModule,   // Register Campaign Module
     PostModule,       // Register Post Module
-    BrandModule,  // Register Brand Module
+    BrandModule,      // Register Brand Module
   ],
 })
 export class AppModule {}
