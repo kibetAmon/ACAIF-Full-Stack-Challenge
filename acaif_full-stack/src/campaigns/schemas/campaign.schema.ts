@@ -16,6 +16,9 @@ export class Campaign extends Document {
   @Prop({ required: true })
   instructions: string;
 
+  @Prop({ required: true })
+  createdAt: Date;
+
   @Prop({ required: true, type: Types.ObjectId, ref: 'Brand' })
   brandId: Types.ObjectId; // Reference to the brand that owns this campaign
 

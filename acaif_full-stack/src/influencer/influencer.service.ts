@@ -49,14 +49,6 @@ export class InfluencerService {
     // Logic to calculate performance metrics, such as total posts, engagement, etc.
     const influencer = await this.influencerModel.findById(influencerId).exec();
 
-    // Placeholder for performance data
-    return {
-      totalPosts: 15, 
-      postingDates: ['2024-01-01', '2024-01-05'],
-      engagement: {
-        likes: 100,
-        shares: 50,
-      },
-    };
+
   }
 }
