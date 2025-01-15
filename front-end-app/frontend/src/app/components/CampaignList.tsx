@@ -1,23 +1,29 @@
-import React, { useEffect, useState } from 'react';
-import { fetchCampaigns } from '../services/campaignService';
-import CampaignCard from './CampaignCard';
+import React from 'react';
+import styles from './CampaignList.module.css';
 
-const CampaignList = () => {
-  const [campaigns, setCampaigns] = useState([]);
+interface Campaign {
+  title: string;
+  status: string;
+  deadline: string;
+}
 
-  useEffect(() => {
-    const getCampaigns = async () => {
-      const data = await fetchCampaigns();
-      setCampaigns(data);
-    };
-    getCampaigns();
-  }, []);
+interface CampaignListProps {
+  campaigns: Campaign[];
+}
 
+const CampaignList: React.FC<CampaignListProps> = ({ campaigns }) => {
   return (
-    <div className="campaign-list">
-      {campaigns.map((campaign) => (
-        <CampaignCard key={campaign._id} campaign={campaign} />
-      ))}
+    <div className={styles.container}>
+      <h2 className={styles.title}>Campaign List</h2>
+      <ul>
+        {campaigns.map((campaign, index) => (
+          <li key={index}>
+            <p>
+              <strong>{campaign.title}</strong> - <span className={styles.status}>{campaign.status}</span> (Deadline: {new Date(campaign.deadline).toLocaleDateString()})
+            </p>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 };
